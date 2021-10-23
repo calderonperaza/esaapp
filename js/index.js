@@ -14,9 +14,9 @@ sendButton.addEventListener('click', () => {
     Email.send({
       SecureToken: 'bceedb94-3944-4948-a2d0-1c2d6f66237b',
       To: 'agredalex1997@gmail.com',
-      From: emailInputValue,
-      Subject: `Mensaje de ${nameInputValue} desde esaapp.com`,
-      Body: somethingInputValue,
+      From: emailInput.value,
+      Subject: `Mensaje de ${nameInput.value} desde esaapp.com`,
+      Body: somethingInput.value,
     }).then(function () {
       alert('Pronto nos contactaremos contigo');
     });
