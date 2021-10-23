@@ -1,15 +1,13 @@
 const sendButton = document.getElementById('send');
-const nameInputValue = document.getElementById('name').value;
-const emailInputValue = document.getElementById('email').value;
-const somethingInputValue = document.getElementById('something').value;
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const somethingInput = document.getElementById('something');
 
 sendButton.addEventListener('click', () => {
-  console.log(JSON.stringify({ nameInputValue, emailInputValue, somethingInputValue }));
-
   if (
-    !nameInputValue.trim() ||
-    !emailInputValue.trim() ||
-    !somethingInputValue.trim()
+    !nameInput.value.trim() ||
+    !emailInput.value.trim() ||
+    !somethingInput.value.trim()
   ) {
     alert('Debes llenar todos los campos para poder contactarnos');
   } else {
