@@ -12,7 +12,7 @@ sendButton.addEventListener('click', () => {
     alert('Debes llenar todos los campos para poder contactarnos');
   } else {
     Email.send({
-      SecureToken: 'bceedb94-3944-4948-a2d0-1c2d6f66237b',
+      SecureToken: 'e83b8515-0368-4326-9df9-85721ffb762d',
       To: 'agredalex1997@gmail.com',
       From: emailInput.value,
       Subject: `Mensaje de ${nameInput.value} desde esaapp.com`,
