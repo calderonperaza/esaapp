@@ -2,639 +2,560 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Consultoria Profesional</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esaapp.com</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZXJBVDf7R4JqmSpopVPoduIGWx1IwpBM"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="js/index.js" defer></script>
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center text-white">
-                   <!--</div> <small><i class="fa fa-phone-alt mr-2"></i>2440-2280</small> -->
-                    <small class="px-3">|</small>
-                    <!--<small><i class="fa fa-envelope mr-2"></i>lh0600@ues.edu.sv</small> -->
-                </div>
-            </div>
-            <div class="col-lg-6 text-center text-lg-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-white px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-white pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
+  <div class="svg-wrap">
+    <svg width="64" height="64" viewBox="0 0 64 64">
+      <path id="arrow-left" d="M26.667 10.667q1.104 0 1.885 0.781t0.781 1.885q0 1.125-0.792 1.896l-14.104 14.104h41.563q1.104 0 1.885 0.781t0.781 1.885-0.781 1.885-1.885 0.781h-41.563l14.104 14.104q0.792 0.771 0.792 1.896 0 1.104-0.781 1.885t-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.813-0.771-1.896t0.771-1.896l18.667-18.667q0.792-0.771 1.896-0.771z"></path>
+    </svg>
+
+    <svg width="64" height="64" viewBox="0 0 64 64">
+      <path id="arrow-right" d="M37.333 10.667q1.125 0 1.896 0.771l18.667 18.667q0.771 0.771 0.771 1.896t-0.771 1.896l-18.667 18.667q-0.771 0.771-1.896 0.771-1.146 0-1.906-0.76t-0.76-1.906q0-1.125 0.771-1.896l14.125-14.104h-41.563q-1.104 0-1.885-0.781t-0.781-1.885 0.781-1.885 1.885-0.781h41.563l-14.125-14.104q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z"></path>
+    </svg>
+  </div>
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
-                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-book-reader mr-3"></i>Esaapp</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
+  <!-- MAIN CONTENT -->
+
+  <div class="container-fluid">
+
+    <!-- HEADER -->
+
+    <section id="header">
+
+      <!-- NAVIGATION -->
+      <nav class="navbar navbar-fixed-top navbar-default bottom">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">Nuestro Equipo</a>
-                  
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="detail.html" class="dropdown-item">Grupo 1</a>
-                            <a href="feature.html" class="dropdown-item">Grupo 2</a>
-                            <a href="team.html" class="dropdown-item">Grupo 3</a>
-                            <a href="testimonial.html" class="dropdown-item">Grupo 4</a>
-                        </div>
+            <a class="navbar-brand" href="#header">Esaapp</a>
+          </div><!-- /.navbar-header -->
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#header">Inicio</a></li>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="#portfolio">Portafolio</a></li>
+              <li><a href="#team">Nuestro Equipo</a></li>
+              <li><a href="#info">Información</a></li>
+              <li><a href="#contact">Contáctenos</a></li>
+            </ul>
+          </div> <!-- /.navbar-collapse -->
+        </div> <!-- /.container -->
+      </nav>
+
+      <!-- SLIDER -->
+      <div class="header-slide">
+        <section>
+          <div id="loader" class="pageload-overlay" data-opening="M 0,0 0,60 80,60 80,0 z M 80,0 40,30 0,60 40,30 z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+              <path d="M 0,0 0,60 80,60 80,0 Z M 80,0 80,60 0,60 0,0 Z" />
+            </svg>
+          </div> <!-- /.pageload-overlay -->
+
+          <div class="image-slide bg-fixed">
+            <div class="overlay">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="slider-content">
+                      <h1></h1>
+                      <p>Somos un equipo de El Salvador dispuestos a ofreces los mejores servicios tecnol&oacute;gicos.</p>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Join Us</a>
+
+                  </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+              </div> <!-- /.container -->
+            </div> <!-- /.overlay -->
+          </div> <!-- /.image-slide -->
+
+          <nav class="nav-slide">
+            <a class="prev" href="#prev">
+              <span class="icon-wrap">
+                <svg class="icon" width="32" height="32" viewBox="0 0 64 64">
+                  <use xlink:href="#arrow-left">
+                </svg>
+              </span>
+              <div>
+                <span>Anterior</span>
+                <h3>...</h3>
+                <p>...</p>
+                <img alt="Previous thumb">
+              </div>
+            </a>
+            <a class="next" href="#next">
+              <span class="icon-wrap">
+                <svg class="icon" width="32" height="32" viewBox="0 0 64 64">
+                  <use xlink:href="#arrow-right">
+                </svg>
+              </span>
+              <div>
+                <span>Siguiente</span>
+                <h3>...</h3>
+                <p>...</p>
+                <img alt="Next thumb">
+              </div>
+            </a>
+          </nav>
+        </section>
+
+        <script type="text/javascript">
+          var dataHeader = [
+            {
+              bigImage: "images/slide-1.jpg",
+              title: "Esaapp.com",
+              author: "Esaapp"
+            },
+            {
+              bigImage: "images/Servicios-tecnología.jpg",
+              title: "Servicios de tecnología",
+              author: "Esaapp"
+            },
+            {
+              bigImage: "images/Desarrollo-software.jpeg",
+              title: "Desarrollo de software",
+              author: "Esaapp"
+            },
+            {
+              bigImage: "images/Capacitacion.jpg",
+              title: "Capacitación",
+              author: "Esaapp"
+            },
+            {
+              bigImage: "images/Producto-innovador.jpg",
+              title: "Productos innovadores",
+              author: "Esaapp"
+            },
+            {
+              bigImage: "images/Desarrollo-sitios-web.jpg",
+              title: "Desarrollo de sitios web",
+              author: "Esaapp"
+            },
+            {
+              bigImage: "images/Nuestro-equipo.jpg",
+              title: "Nuestro equipo",
+              author: "Esaapp"
+            }
+          ],
+            loaderSVG = new SVGLoader(document.getElementById('loader'), { speedIn: 600, speedOut: 600, easingIn: mina.easeinout });
+          loaderSVG.show()
+        </script>
+
+      </div><!-- /.header-slide -->
+    </section>
+
+    <!-- HEADER END -->
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="light">
+      <header class="title">
+        <h2>Quiénes somos</span></h2>
+        <p>Somos un grupo de jóvenes con pasión por las tecnologías, los cuales desarrollamos productos y servicios que van acorde a las nuevas tendencias, a la juventud, y que buscamos junto con aprender divertirnos.</p>
+      </header>
+
+      <div class="container">
+        <div class="row table-row">
+          <div class="col-sm-6 hidden-xs">
+            <div class="section-content">
+              <div class="big-image" style="background-image:url(images/about.jpeg)"></div>
             </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+          </div>
 
-
-    <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
-        <div class="container text-center my-5 py-5">
-            <h1 class="text-white mt-4 mb-4">Conoce Nuestro sitio</h1>
-            <h1 class="text-white display-1 mb-5">Consultoria Profesional</h1>
-            <!-- <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Courses</button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Courses 1</a>
-                            <a class="dropdown-item" href="#">Courses 2</a>
-                            <a class="dropdown-item" href="#">Courses 3</a>
-                        </div>
-                    </div>
-                    <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Keyword">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary px-4 px-lg-5">Search</button>
-                    </div>
+          <div class="col-sm-6">
+            <div class="section-content">
+              <div class="about-content left animated" data-animate="fadeInLeft">
+                <div class="about-icon"><i class="fa fa-check"></i></div>
+                <div class="about-detail">
+                  <h4>Misión</h4>
+                  <p>Ofrecer una amplia gama de productos y servicios tecnológicos con un alto estándar de calidad que se adapten a las necesidades del cliente.</p>
                 </div>
-            </div>-->
-            3
+              </div>
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+                <div class="about-icon"><i class="fa fa-eye"></i></div>
+                <div class="about-detail">
+                  <h4>Visión</h4>
+                  <p>Convertirnos en la primera opción para el cliente en detalles especiales y servicios digitales.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- /.row table-row -->
+      </div> <!-- /.container -->
+    </section>
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio" class="light">
+      <header class="title">
+        <h2>Portfolio</h2>
+        <p>Lorem ipsum Cupidatat sit irure nostrud ut deserunt ad enim id laboris. Lorem ipsum Enim proident et eu et minim voluptate eiusmod ullamco commodo aliqua amet.</p>
+      </header>
+
+      <div class="container-fluid">
+        <div class="row">
+          <ul id="filters" class="list-inline">
+            <li data-filter="all" class="filter">TODOS</li>
+            <li data-filter=".software" class="filter">Software</li>
+            <li data-filter=".servicio" class="filter">Servicios</li>
+            <li data-filter=".producto" class="filter">Productos</li>
+          </ul>
         </div>
-    </div>
-    <!-- Header End -->
 
-
-    <!-- About Start 
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">About Us</h6>
-                        <h1 class="display-4"></h1>
-                    </div>
-                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                    <div class="row pt-3 mx-0">
-                        <div class="col-3 px-0">
-                            <div class="bg-success text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">123</h1>
-                                <h6 class="text-uppercase text-white">Available<span class="d-block">Subjects</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-primary text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">1234</h1>
-                                <h6 class="text-uppercase text-white">Online<span class="d-block">Courses</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-secondary text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">123</h1>
-                                <h6 class="text-uppercase text-white">Skilled<span class="d-block">Instructors</span></h6>
-                            </div>
-                        </div>
-                        <div class="col-3 px-0">
-                            <div class="bg-warning text-center p-4">
-                                <h1 class="text-white" data-toggle="counter-up">1234</h1>
-                                <h6 class="text-uppercase text-white">Happy<span class="d-block">Students</span></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row">
+          <div class="container-portfolio">
+            <!-- PORTFOLIO OBJECT -->
+            <script type="text/javascript">
+              var portfolio = [
+                {
+                  category: "producto",
+                  image: "images/guitar-picks.jpg",
+                  title: "Venta de <span>collares</span> y <span>pulseras de uñetas</span>",
+                  link: "https://aaronstyle.netlify.app",
+                  text: "Una pulsera con una uñeta para tocar instrumentos de cuerda"
+                },
+                {
+                  category: "servicio",
+                  image: "images/empresa-info.jpg",
+                  title: "Mostrar y administar información de la <span>empresa</span>",
+                  link: "https://softwaresolutionsv.esaapp.com",
+                  text: "Un sitio web, para una empresa con información de misión, visión, los servicios que ofrecen"
+                },
+                {
+                  category: "producto",
+                  image: "images/sticker-vinilo.jpg",
+                  title: "<span>Stickers</span> de <span>vinilo</span> personalizables",
+                  link: "https://tucalcomania.esaapp.com",
+                  text: "El material es un vinilo de fácil aplicación en cualquier superficie y bastante durable."
+                },
+                {
+                  category: "servicio",
+                  image: "images/comercio-electronico.jpg",
+                  title: "Encarga y comprar de <span>accesorios varios</span> online",
+                  link: "https://github.com/willix0981",
+                  text: "Tienda en línea para encargar y comprar a través de comercios como aliexpress o alibaba."
+                },
+                {
+                  category: "producto",
+                  image: "images/tazas.jpg",
+                  title: "Tienda online de <span>tazas</span>",
+                  link: "https://cupsart.esaapp.com",
+                  text: "maneja un catálogo de diseños que el cliente puede estampar en tazas, si la persona no puede encontrar un diseño que le parezca, no vamos a crear uno por ellos, ahí es donde el cliente entra en acción desplegando sus ideas y creatividad."
+                },
+                {
+                  category: "servicio",
+                  image: "images/viajes.jpg",
+                  title: "Reserva de <span>viajes</span>",
+                  link: "https://car-go.esaapp.com",
+                  text: "Sistema para gestionar viajes de transporte motorista-cliente"
+                },
+                {
+                  category: "software",
+                  image: "images/virtualdoc.png",
+                  title: "Sistema Medico",
+                  link: "https://virtualdoc.esaapp.com",
+                  text: "Sistema de control de pacientes y expediente médico para clinicas privadas"
+                },
+                {
+                  category: "software",
+                  image: "images/resbar.png",
+                  title: "RESBAR",
+                  link: "https://resbar.esaapp.com",
+                  text: "Sistema de manejo de ordenes para restaurantes, bares y cafeterías"
+                }
+              ];
+            </script>
+          </div>
         </div>
-    </div>
-    -->
-    <!-- About End -->
+      </div>
+    </section>
 
 
-    <!-- Feature Start 
-    <div class="container-fluid bg-image" style="margin: 90px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 my-5 pt-5 pb-lg-5">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Why Choose Us?</h6>
-                        <h1 class="display-4">Why You Should Start Learning with Us?</h1>
-                    </div>
-                    <p class="mb-4 pb-2">Aliquyam accusam clita nonumy ipsum sit sea clita ipsum clita, ipsum dolores amet voluptua duo dolores et sit ipsum rebum, sadipscing et erat eirmod diam kasd labore clita est. Diam sanctus gubergren sit rebum clita amet.</p>
-                    <div class="d-flex mb-3">
-                        <div class="btn-icon bg-primary mr-4">
-                            <i class="fa fa-2x fa-graduation-cap text-white"></i>
-                        </div>
-                        <div class="mt-n1">
-                            <h4>Skilled Instructors</h4>
-                            <p>Labore rebum duo est Sit dolore eos sit tempor eos stet, vero vero clita magna kasd no nonumy et eos dolor magna ipsum.</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <div class="btn-icon bg-secondary mr-4">
-                            <i class="fa fa-2x fa-certificate text-white"></i>
-                        </div>
-                        <div class="mt-n1">
-                            <h4>International Certificate</h4>
-                            <p>Labore rebum duo est Sit dolore eos sit tempor eos stet, vero vero clita magna kasd no nonumy et eos dolor magna ipsum.</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="btn-icon bg-warning mr-4">
-                            <i class="fa fa-2x fa-book-reader text-white"></i>
-                        </div>
-                        <div class="mt-n1">
-                            <h4>Online Classes</h4>
-                            <p class="m-0">Labore rebum duo est Sit dolore eos sit tempor eos stet, vero vero clita magna kasd no nonumy et eos dolor magna ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/feature.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
+    <!-- TEAM -->
+
+    <section id="team" class="light">
+      <header class="title">
+        <h2>Creative <span>Team</span></h2>
+        <p>Lorem ipsum Dolor et reprehenderit laborum deserunt aliquip incididunt tempor id non. Lorem ipsum Fugiat anim labore cupidatat consequat non in sit dolore anim anim consequat nisi.</p>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown">
+              <div class="img-team">
+                <img src="images/team-1.png" alt="" class="img-circle">
+              </div>
+
+              <h3>John Doe</h3>
+              <h5>Creative Director</h5>
+
+              <p>Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+              </div>
             </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown">
+              <div class="img-team">
+                <img src="images/team-2.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Ellie Morgan</h3>
+              <h5>Designer</h5>
+
+              <p>Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown">
+              <div class="img-team">
+                <img src="images/team-3.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Elche</h3>
+              <h5>Developer</h5>
+
+              <p>Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown">
+              <div class="img-team">
+                <img src="images/team-4.png" alt="" class="img-circle">
+              </div>
+
+              <h3>JF Thiago</h3>
+              <h5>Commerce</h5>
+
+              <p>Lorem ipsum Proident incididunt sint dolor cupidatat pariatur dolore magna pariatur in ea aliqua.</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div> <!-- /.container -->
+    </section>
 
--->
-    <!-- Feature Start -->
+    <!-- INFO -->
 
+    <section id="info" class="dark">
+      <header class="title">
+        <h2>Our <span>Experties</span></h2>
+        <p>Lorem ipsum Nulla in incididunt esse tempor dolore ad voluptate aliquip magna sed in.</p>
+      </header>
 
-    <!-- Courses Start 
-    <div class="container-fluid px-0 py-5">
-        <div class="row mx-0 justify-content-center pt-5">
-            <div class="col-lg-6">
-                <div class="section-title text-center position-relative mb-4">
-                    <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Our Courses</h6>
-                    <h1 class="display-4">Checkout New Releases Of Our Courses</h1>
-                </div>
+      <div class="container experties">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="skill">
+              <ul class="skill-bar list-unstyled">
+                <li><span class="percentage" data-value="50%"></span><em>Branding</em></li>
+                <li><span class="percentage" data-value="95%"></span><em>Development</em></li>
+                <li><span class="percentage" data-value="22%"></span><em>Social</em></li>
+              </ul>
             </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="skill">
+              <ul class="skill-bar list-unstyled">
+                <li><span class="percentage" data-value="63%"></span><em>Graphic Design</em></li>
+                <li><span class="percentage" data-value="90%"></span><em>Consulting</em></li>
+                <li><span class="percentage" data-value="43%"></span><em>Logo</em></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="owl-carousel courses-carousel">
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="img/courses-1.jpg" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
-                    </div>
-                </div>
+      </div> <!-- /.container -->
+    </section>
+
+
+    <section class="separator blue">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="counter animated" data-animate="fadeInUp" data-delay="0">
+              <div class="counter-icon">
+                <i class="fa fa-group"></i>
+              </div>
+              <div class="counter-content">
+                <span class="value" data-from="0" data-to="43"></span>
+                <small>Clients</small>
+              </div>
             </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="img/courses-2.jpg" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
-                    </div>
-                </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="counter animated" data-animate="fadeInUp" data-delay="500">
+              <div class="counter-icon">
+                <i class="fa fa-leaf"></i>
+              </div>
+              <div class="counter-content">
+                <span class="value" data-from="0" data-to="20"></span>
+                <small>Awards</small>
+              </div>
             </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="img/courses-3.jpg" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
-                    </div>
-                </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="counter animated" data-animate="fadeInUp" data-delay="1000">
+              <div class="counter-icon">
+                <i class="fa fa-gears"></i>
+              </div>
+              <div class="counter-content">
+                <span class="value" data-from="0" data-to="34"></span>
+                <small>Projects</small>
+              </div>
             </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="img/courses-4.jpg" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
-                    </div>
-                </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="counter animated" data-animate="fadeInUp" data-delay="1500">
+              <div class="counter-icon">
+                <i class="fa fa-inbox"></i>
+              </div>
+              <div class="counter-content">
+                <span class="value" data-from="0" data-to="1298"></span>
+                <small>Mail</small>
+              </div>
             </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="img/courses-5.jpg" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="courses-item position-relative">
-                <img class="img-fluid" src="img/courses-6.jpg" alt="">
-                <div class="courses-text">
-                    <h4 class="text-center text-white px-3">Web design & development courses for beginners</h4>
-                    <div class="border-top w-100 mt-3">
-                        <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>Jhon Doe</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>4.5 <small>(250)</small></span>
-                        </div>
-                    </div>
-                    <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="row justify-content-center bg-image mx-0 mb-5">
-            <div class="col-lg-6 py-5">
-                <div class="bg-white p-5 my-5">
-                    <h1 class="text-center mb-4">30% Off For New Students</h1>
-                    <form>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="padding: 30px 20px;">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="padding: 30px 20px;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <select class="custom-select bg-light border-0 px-3" style="height: 60px;">
-                                        <option selected>Select A courses</option>
-                                        <option value="1">courses 1</option>
-                                        <option value="2">courses 1</option>
-                                        <option value="3">courses 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <button class="btn btn-primary btn-block" type="submit" style="height: 60px;">Sign Up Now</button>
-                            </div>
-                        </div>
-                    </form>
+      </div>
+    </section>
+
+
+    <!-- FOOTER CONTACT -->
+
+    <section id="contact" class="dark">
+      <header class="title">
+        <h2><span>Contáctenos </span></h2>
+        <p>Si estas listo para conocer o saber acerca de las diversas ideas de negocios de nuestro sitio web, puedes ponerte en contacto y será un placer atenderte.</p>
+      </header>
+
+      <div class="container pb-2">
+        <div class="row">
+          <div class="col-md-8 animated" data-animate="fadeInLeft">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" id="name" class="form-control" style="border-radius: .75rem;" placeholder="Su nombre">
                 </div>
-            </div>
+                <div class="col-md-6">
+                  <input type="email" id="email" class="form-control" style="border-radius: .75rem;" placeholder="Su correo electónico">
+                </div>
+                <div class="col-md-12">
+                  <textarea id="something" class="form-control" rows="3" style="border-radius: .75rem;" placeholder="Diganos algo..."></textarea>
+                </div>
+                <div class="col-md-12 ">
+                  <button id="send" class="btn btn-primary btn-lg" style="margin-bottom: 3rem;" type="button">ENVIAR</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-4 animated" data-animate="fadeInRight">
+            <address>
+              <span><i class="fa fa-map-marker fa-lg"></i> Ave. Fray Felipe de Jesús Moraga Sur, Santa Ana, El Salvador</span>
+              <span><i class="fa fa-phone fa-lg"></i> <a href="tel:+50324840811">(503) 2484 - 0811</a></span>
+              <span><i class="fa fa-envelope-o fa-lg"></i> <a href="mailto:calderonperaza@gmail.com">calderonperaza@gmail.com</a></span>
+
+            </address>
+          </div>
+
         </div>
-    </div>
-    -->
-    <!-- Courses End -->
+      </div>
+    </section>
 
-
-    <!-- Team Start
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative mb-5">
-                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Instructors</h6>
-                <h1 class="display-4">Meet Our Instructors</h1>
-            </div>
-            <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Instructor Name</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Instructor Name</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Instructor Name</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                    <div class="bg-light text-center p-4">
-                        <h5 class="mb-3">Instructor Name</h5>
-                        <p class="mb-2">Web Design & Development</p>
-                        <div class="d-flex justify-content-center">
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="mx-1 p-1" href="#"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- <p>Made BY <i class="fa fa-heart"></i> <a href="http://templatestock.co">Template Stock</a></p>
+            <p><small>Images : unsplash.com</small></p> -->
+          </div>
         </div>
-    </div>
-     -->
-    <!-- Team End -->
+      </div>
+    </section>
 
+  </div><!-- /.container-fluid -->
 
-    <!-- Testimonial Start 
-    <div class="container-fluid bg-image py-5" style="margin: 90px 0;">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Testimonial</h6>
-                        <h1 class="display-4">What Say Our Students</h1>
-                    </div>
-                    <p class="m-0">Dolor est dolores et nonumy sit labore dolores est sed rebum amet, justo duo ipsum sanctus dolore magna rebum sit et. Diam lorem ea sea at. Nonumy et at at sed justo est nonumy tempor. Vero sea ea eirmod, elitr ea amet diam ipsum at amet. Erat sed stet eos ipsum diam</p>
-                </div>
-                <div class="col-lg-7">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="bg-white p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="img/testimonial-2.jpg" alt="">
-                                <div>
-                                    <h5>Student Name</h5>
-                                    <span>Web Design</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white p-5">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <p>Sed et elitr ipsum labore dolor diam, ipsum duo vero sed sit est est ipsum eos clita est ipsum. Est nonumy tempor at kasd. Sed at dolor duo ut dolor, et justo erat dolor magna sed stet amet elitr duo lorem</p>
-                            <div class="d-flex flex-shrink-0 align-items-center mt-4">
-                                <img class="img-fluid mr-4" src="img/testimonial-1.jpg" alt="">
-                                <div>
-                                    <h5>Student Name</h5>
-                                    <span>Web Design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!-- Testimonial Start -->
-
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <div class="bg-light d-flex flex-column justify-content-center px-5" style="height: 450px;">
-                        <div class="d-flex align-items-center mb-5">
-                            <div class="btn-icon bg-primary mr-4">
-                                <i class="fa fa-2x fa-map-marker-alt text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Our Location</h4>
-                                <p class="m-0">123 Street, New York, USA</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-5">
-                            <div class="btn-icon bg-secondary mr-4">
-                                <i class="fa fa-2x fa-phone-alt text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Call Us</h4>
-                                <p class="m-0">+012 345 6789</p>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="btn-icon bg-warning mr-4">
-                                <i class="fa fa-2x fa-envelope text-white"></i>
-                            </div>
-                            <div class="mt-n1">
-                                <h4>Email Us</h4>
-                                <p class="m-0">info@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="section-title position-relative mb-4">
-                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Necesitas ayuda?</h6>
-                        <h1 class="display-4">Mandanos un Mensaje</h1>
-                    </div>
-                    <div class="contact-form">
-                        <form>
-                            <div class="row">
-                                <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
-                                </div>
-                                <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid position-relative overlay-top bg-dark text-white-50 py-5" style="margin-top: 90px;">
-        <div class="container mt-5 pt-5">
-            <div class="row">
-                <div class="col-md-6 mb-5">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="mt-n2 text-uppercase text-white"><i class="fa fa-book-reader mr-3"></i>Edukate</h1>
-                    </a>
-                    <p class="m-0">Accusam nonumy clita sed rebum kasd eirmod elitr. Ipsum ea lorem at et diam est, tempor rebum ipsum sit ea tempor stet et consetetur dolores. Justo stet diam ipsum lorem vero clita diam</p>
-                </div>
-                <div class="col-md-6 mb-5">
-                    <h3 class="text-white mb-4">Newsletter</h3>
-                    <div class="w-100">
-                        <div class="input-group">
-                            <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary px-4">Sign Up</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Get In Touch</h3>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                    <div class="d-flex justify-content-start mt-4">
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
-                        <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-linkedin-in"></i></a>
-                        <a class="text-white" href="#"><i class="fab fa-2x fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Our Courses</h3>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Web Design</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Apps Design</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
-                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>SEO</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h3 class="text-white mb-4">Quick Links</h3>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms & Condition</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Regular FAQs</a>
-                        <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help & Support</a>
-                        <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-white-50 border-top py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0">Copyright &copy; <a class="text-white" href="#">Your Site Name</a>. All Rights Reserved.
-                    </p>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <p class="m-0">Designed by <a class="text-white" href="https://htmlcodex.com">HTML Codex</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary rounded-0 btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <!-- SCRIPT -->
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
