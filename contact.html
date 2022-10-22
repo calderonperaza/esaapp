@@ -142,23 +142,23 @@
                         <h1 class="display-4">Envíanos Un Mensaje</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="form_contactenos"  method="POST">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Nombre" required="required">
+                                    <input id="txt_nombre" type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu Nombre" required="required">
                                 </div>
-                                <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Correo" required="required">
-                                </div>
+                                <!-- <div class="col-6 form-group">
+                                    <input id="txt_correo" type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Correo" required="required">
+                                </div> -->
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Título" required="required">
+                                <input id="txt_titulo" type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Título" required="required">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" required="required"></textarea>
+                                <textarea id="txta_mensaje" class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Enviar Mensaje</button>
+                                <button id="btn_enviar" class="btn btn-primary py-3 px-5" type="submit">Enviar Mensaje</button>
                             </div>
                         </form>
                     </div>
@@ -194,9 +194,9 @@
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <h3 class="text-white mb-4">Get In Touch</h3>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Av. Fray Felipe de Jesús Moraga Sur, Santa Ana, El Salvador</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>(503) 2484 - 0811</p>
+                    <p><i class="fa fa-envelope mr-2"></i>calderonperaza@gmail.com</p>
                     <div class="d-flex justify-content-start mt-4">
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>
@@ -258,6 +258,31 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- para enviar el correo -->
+    <script>
+        const btnEnviarMensaje = document.getElementById("btn_enviar") 
+
+        btnEnviarMensaje.addEventListener("click",function(e){
+            e.preventDefault();
+            const destino = "calderonperaza@gmail.com"
+            const titulo = document.getElementById("txt_titulo").value;
+            const nombre = " "+document.getElementById("txt_nombre").value;
+            //const correo = " "+document.getElementById("txt_correo").value;
+            const mensaje = " "+document.getElementById("txta_mensaje").value;
+            //window.location.href = `mailto:${destino}?subject=${titulo}&&body=Nombre%3A${nombre}%0ACorreo%3A${correo}%0AMensaje%3A${mensaje}`;
+            window.location.href = `mailto:${destino}?subject=${titulo}&&body=Nombre%3A${nombre}%0AMensaje%3A${mensaje}`;
+
+            
+            //limpiar
+            titulo.value='';
+            nombre.value='';
+            correo.value='';
+            mensaje.value='';
+
+           
+        });
+    </script>
 </body>
 
 </html>
