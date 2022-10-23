@@ -261,25 +261,21 @@
     
     <!-- para enviar el correo -->
     <script>
-        const btnEnviarMensaje = document.getElementById("btn_enviar") 
-
-        btnEnviarMensaje.addEventListener("click",function(e){
+        const formulario = document.getElementById("form_contactenos")
+        //Al cargar o recargar la pagina limpia los campos
+        document.getElementById("txt_titulo").value='';
+        document.getElementById("txt_nombre").value='';
+        document.getElementById("txta_mensaje").value='';
+        
+        formulario.addEventListener("submit",function(e){
             e.preventDefault();
             const destino = "calderonperaza@gmail.com"
             const titulo = document.getElementById("txt_titulo").value;
-            const nombre = " "+document.getElementById("txt_nombre").value;
-            //const correo = " "+document.getElementById("txt_correo").value;
-            const mensaje = " "+document.getElementById("txta_mensaje").value;
-            //window.location.href = `mailto:${destino}?subject=${titulo}&&body=Nombre%3A${nombre}%0ACorreo%3A${correo}%0AMensaje%3A${mensaje}`;
-            window.location.href = `mailto:${destino}?subject=${titulo}&&body=Nombre%3A${nombre}%0AMensaje%3A${mensaje}`;
-
-            
-            //limpiar
-            titulo.value='';
-            nombre.value='';
-            mensaje.value='';
-
-           
+            const nombre = document.getElementById("txt_nombre").value;
+            const mensaje = document.getElementById("txta_mensaje").value;
+            if(destino && titulo && nombre && mensaje){
+                window.location.href = `mailto:${destino}?subject=${titulo+" (ESAAPP)"}&&body=Nombre%3A%20${nombre}%0AMensaje%3A%20${mensaje}`;
+            }
         });
     </script>
 </body>
