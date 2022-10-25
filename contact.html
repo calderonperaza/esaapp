@@ -261,20 +261,33 @@
     
     <!-- para enviar el correo -->
     <script>
-        const formulario = document.getElementById("form_contactenos")
-        //Al cargar o recargar la pagina limpia los campos
-        document.getElementById("txt_titulo").value='';
-        document.getElementById("txt_nombre").value='';
-        document.getElementById("txta_mensaje").value='';
+        //formulario contactenos
+        const formulario = document.getElementById("form_contactenos");
+       
+        //para contactenos
+        const destino = "calderonperaza@gmail.com"
+        const titulo = document.getElementById("txt_titulo");
+        const nombre = document.getElementById("txt_nombre");
+        const mensaje = document.getElementById("txta_mensaje");
+    
+        //Para limpiar los campos
+        function limpiar(){
+            titulo.value =''
+            nombre.value = ''
+            mensaje.value = ''
+        }
+
+        //limpia al recargar
+        limpiar();
         
+        //obtenemos informacion de campos atraves de submit
         formulario.addEventListener("submit",function(e){
-            e.preventDefault();
-            const destino = "calderonperaza@gmail.com"
-            const titulo = document.getElementById("txt_titulo").value;
-            const nombre = document.getElementById("txt_nombre").value;
-            const mensaje = document.getElementById("txta_mensaje").value;
-            if(destino && titulo && nombre && mensaje){
-                window.location.href = `mailto:${destino}?subject=${titulo+" (ESAAPP)"}&&body=Nombre%3A%20${nombre}%0AMensaje%3A%20${mensaje}`;
+            e.preventDefault();     
+            console.log(titulo.value)    
+            if(titulo.value && nombre.value && mensaje.value){
+                window.location.href = `mailto:${destino}?subject=${titulo.value+" (ESAAPP)"}&&body=Nombre%3A%20${nombre.value}%0AMensaje%3A%20${mensaje.value}`;
+                //limpiar campos despues de hacer submit
+                limpiar();
             }
         });
     </script>
