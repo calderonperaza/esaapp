@@ -112,23 +112,23 @@
                         <h1 class="display-4">Envíanos Un Mensaje</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="form_contactenos"  method="POST">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Nombre" required="required">
+                                    <input id="txt_nombre" type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Tu Nombre" required="required">
                                 </div>
-                                <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Correo" required="required">
-                                </div>
+                                <!-- <div class="col-6 form-group">
+                                    <input id="txt_correo" type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Correo" required="required">
+                                </div> -->
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Título" required="required">
+                                <input id="txt_titulo" type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Título" required="required">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" required="required"></textarea>
+                                <textarea id="txta_mensaje" class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Mensaje" required="required"></textarea>
                             </div>
                             <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit">Enviar Mensaje</button>
+                                <button id="btn_enviar" class="btn btn-primary py-3 px-5" type="submit">Enviar Mensaje</button>
                             </div>
                         </form>
                     </div>
@@ -218,6 +218,39 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- para enviar el correo -->
+    <script>
+        //formulario contactenos
+        const formulario = document.getElementById("form_contactenos");
+       
+        //para contactenos
+        const destino = "calderonperaza@gmail.com"
+        const titulo = document.getElementById("txt_titulo");
+        const nombre = document.getElementById("txt_nombre");
+        const mensaje = document.getElementById("txta_mensaje");
+    
+        //Para limpiar los campos
+        function limpiar(){
+            titulo.value =''
+            nombre.value = ''
+            mensaje.value = ''
+        }
+
+        //limpia al recargar
+        limpiar();
+        
+        //obtenemos informacion de campos atraves de submit
+        formulario.addEventListener("submit",function(e){
+            e.preventDefault();     
+            console.log(titulo.value)    
+            if(titulo.value && nombre.value && mensaje.value){
+                window.location.href = `mailto:${destino}?subject=${titulo.value+" (ESAAPP)"}&&body=Nombre%3A%20${nombre.value}%0AMensaje%3A%20${mensaje.value}`;
+                //limpiar campos despues de hacer submit
+                limpiar();
+            }
+        });
+    </script>
 </body>
 
 </html>
